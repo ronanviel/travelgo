@@ -60,37 +60,105 @@ body {
     width: 40%
   }
 
-  div.team {
-    margin-left: 60px;
-    margin-top: 40px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  div.team.title {
-    width: 20%;
-    font-size: x-large;
-    font-weight: bold;
-    align-self: center;
-  }
-  div.team.member {
-    width: 20%;
-    margin: 10px;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-  }
-  div.team.member.name {
-    font-size: large;
-    font-weight: bold;
-  }
-  div.team.member.title {
-    font-size: large;
-    color: #ffffff;
-    background: #000;
-  }
+ .team-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 210px;
+  margin: 24px auto 0;
+  padding: 28px 35px;
+  color: #ffffff;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 32, 55, 0.25),
+      rgba(0, 32, 55, 0.25)
+    ),
+    url("../images/about-bg.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*
+  Optionnel : ajoutez une bordure uniquement si vous souhaitez
+  reproduire la bordure rouge visible sur la capture.
+*/
+.team-section {
+  border: 5px solid #ff1f1f;
+}
+
+.team-title {
+  flex: 0 0 220px;
+  display: flex;
+  align-items: center;
+}
+
+.team-title h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.team-members {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  align-items: center;
+  text-align: center;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.member-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #001f35;
+  font-size: 22px;
+}
+
+.team-member h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.team-member p {
+  max-width: 190px;
+  min-height: 42px;
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  line-height: 1.15;
+}
+
+.member-role {
+  display: inline-block;
+  min-width: 90px;
+  padding: 8px 18px;
+  border-radius: 18px;
+  background-color: #07527b;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
 
   label {
     display: inline-block;
