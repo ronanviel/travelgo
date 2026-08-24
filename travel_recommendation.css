@@ -60,6 +60,45 @@ body {
     width: 40%
   }
 
+.title {
+  width: 85%;
+  margin: 10px auto 12px;
+
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 4.3rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: left;
+}
+
+/* Bloc contenant le texte de présentation */
+.text {
+  width: 85%;
+  min-height: 181px;
+  margin: 0 auto;
+  padding: 14px 15px 20px;
+
+  box-sizing: border-box;
+  border: 5px solid #ff1f1f;
+
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Si le contenu du bloc est composé de paragraphes */
+.text p {
+  margin: 0 0 3px;
+}
+
+.text p:last-child {
+  margin-bottom: 0;
+}
+
  .team-section {
   position: relative;
   display: flex;
