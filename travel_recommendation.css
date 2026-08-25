@@ -60,13 +60,13 @@ body {
     width: 40%
   }
 
-.title {
+.title h1 {
   width: 85%;
   margin: 10px auto 12px;
 
   color: #ffffff;
   font-family: Arial, sans-serif;
-  font-size: 4.3rem;
+  font-size: 3.8rem;
   font-weight: 700;
   line-height: 1;
   text-align: left;
@@ -103,21 +103,11 @@ body {
   display: flex;
   align-items: center;
   min-height: 210px;
-  margin: 24px auto 0;
-  padding: 28px 35px;
+  margin-left: 60px;
+  padding-right: 5px;
+  padding-top: 35px;
   color: #ffffff;
   overflow: hidden;
-
-  background-image:
-    linear-gradient(
-      rgba(0, 32, 55, 0.25),
-      rgba(0, 32, 55, 0.25)
-    ),
-    url("../images/about-bg.jpg");
-
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .team-title {
@@ -129,7 +119,7 @@ body {
 .team-title h2 {
   margin: 0;
   color: #ffffff;
-  font-size: 3.8rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.05;
 }
