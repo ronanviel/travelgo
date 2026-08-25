@@ -51,17 +51,16 @@ body {
     margin-top: 100px;
     font-size: xx-large;
     font-weight: bold;
-    width: 40%
+    width: 50%
   }
   
   div.text {
     margin-left: 60px;
     margin-top: 20px;
-    width: 40%
+    width: 85%
   }
 
 .title h1 {
-  width: 85%;
   margin: 10px auto 12px;
 
   color: #ffffff;
