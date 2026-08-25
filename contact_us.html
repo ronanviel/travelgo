@@ -22,7 +22,7 @@
   </section>
 
   <section class="contact-form-container">
-    <form class="contact-form" action="#" method="post">
+    <form class="contact-form">
 
       <div class="form-group">
         <label for="name">Name</label>
@@ -56,9 +56,20 @@
         ></textarea>
       </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit" onclick="thankyou()">Submit</button>
 
     </form>
+    <script>
+        function thankyou(){
+            alert('Thank you for contacting us!')
+            resetForm()
+        }
+        function resetForm() {
+		  document.getElementById("name").value = "";
+		  document.getElementById("email").value = "";
+		  document.getElementById("message").value = "";
+		}
+      </script>
   </section>
 </main>
 </body>
