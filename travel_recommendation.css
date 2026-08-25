@@ -30,6 +30,10 @@ nav {
     font-weight: bold;
   }
 
+.home-intro.is-hidden {
+    display: none;
+}
+
 /* Basic CSS for the form elements */
 body {
     font-family: Arial, sans-serif;
@@ -407,3 +411,11 @@ body {
   color: #ffffff;
   font-size: 20px;
 }
+
+.recommendations {
+    transition: opacity 0.3s ease;
+  }
+  
+  .home-intro.is-hidden + .recommendations {
+    margin-top: 40px;
+  }

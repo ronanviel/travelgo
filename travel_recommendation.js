@@ -1,7 +1,9 @@
+const homeIntro = document.getElementById("homeIntro");
+
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
-  const searchButton = document.getElementById("searchButton");
-  const clearButton = document.getElementById("clearButton");
+  const searchButton = document.getElementById("btnSearch");
+  const clearButton = document.getElementById("btnReset");
 
   if (!searchInput || !searchButton || !clearButton) {
     console.error("Les éléments de recherche sont introuvables.");
@@ -117,6 +119,10 @@ document.addEventListener("DOMContentLoaded", () => {
    * Affichage des cartes de résultats.
    */
   function displayResults(results) {
+    if (homeIntro) {
+        homeIntro.classList.add("is-hidden");
+      }
+
     resultsContainer.innerHTML = `
       <h2 class="results-title">Search Results</h2>
       <div class="results-list"></div>
@@ -153,6 +159,10 @@ document.addEventListener("DOMContentLoaded", () => {
    * Affichage d'un message.
    */
   function displayMessage(message) {
+    if (homeIntro) {
+        homeIntro.classList.remove("is-hidden");
+      }
+      
     resultsContainer.innerHTML = `
       <p class="search-message">${message}</p>
     `;
@@ -179,5 +189,9 @@ document.addEventListener("DOMContentLoaded", () => {
   clearButton.addEventListener("click", () => {
     searchInput.value = "";
     resultsContainer.innerHTML = "";
+
+    if (homeIntro) {
+        homeIntro.classList.remove("is-hidden");
+      }
   });
 });
