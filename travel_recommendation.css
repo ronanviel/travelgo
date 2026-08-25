@@ -203,14 +203,141 @@ body {
     background-color: #45a049;
   }
   
-   .contact-section {
+  .contact-content {
   position: relative;
+
   display: flex;
   align-items: center;
-  min-height: 210px;
-  margin-left: 60px;
-  padding-right: 5px;
-  padding-top: 35px;
+
+  min-height: calc(100vh - 78px);
+  padding: 0 7.2%;
+  box-sizing: border-box;
+  }
+
+.contact-introduction {
+  width: 52%;
+  padding-top: 10px;
+}
+
+.contact-introduction h1 {
+  margin: 0 0 22px;
+
   color: #ffffff;
-  overflow: hidden;
-   }
+  font-size: clamp(3.2rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.contact-introduction p {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.contact-form-container {
+  width: 525px;
+  max-width: 45%;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  /*
+    Fond blanc transparent :
+    plus la dernière valeur est faible,
+    plus l'image apparaît.
+  */
+  background-color: rgba(255, 255, 255, 0.78);
+
+  border-radius: 3px;
+
+  /*
+    Aucune bordure rouge.
+    Cette légère ombre permet seulement de détacher
+    le formulaire de l'image.
+  */
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Formulaire */
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 17px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px;
+
+  border: 1px solid rgba(78, 78, 78, 0.75);
+  border-radius: 7px;
+  outline: none;
+
+  background-color: rgba(255, 255, 255, 0.16);
+
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.form-group input {
+  height: 38px;
+}
+
+.form-group textarea {
+  min-height: 98px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(165, 164, 164, 0.9);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0c8c89;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Bouton d'envoi */
+.contact-form button {
+  width: 100%;
+  height: 39px;
+  margin-top: 8px;
+
+  border: none;
+  border-radius: 7px;
+
+  background-color: #108784;
+
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #08716f;
+  transform: translateY(-1px);
+}
